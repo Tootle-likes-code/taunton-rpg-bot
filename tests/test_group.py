@@ -58,7 +58,7 @@ class SizeTests(GroupTests):
         result = self.test_group.size
 
         # Assert
-        self.assertEquals(expected_result, result)
+        self.assertEqual(expected_result, result)
 
 
 if __name__ == '__main__':

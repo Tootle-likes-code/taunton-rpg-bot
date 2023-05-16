@@ -36,7 +36,7 @@ class SpacesAvailableTests(GameTests):
         result = self.test_game.spaces_available
         
         # Assert
-        self.assertEquals(expected_result, result)
+        self.assertEqual(expected_result, result)
 
 
 class AreSpacesAvailableTests(GameTests):
