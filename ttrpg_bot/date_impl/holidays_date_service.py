@@ -4,10 +4,10 @@ import holidays
 from holidays import HolidayBase
 
 from ttrpg_bot.dates.bank_holiday import BankHoliday
-from ttrpg_bot.dates.date_service import DateService
+from ttrpg_bot.dates.holiday_date_service import HolidayDateService
 
 
-class HolidaysDateService(DateService):
+class HolidaysHolidayDateService(HolidayDateService):
 
     def __init__(self, country: str = "GB", province: str | None = None):
         self._bank_holidays: list[BankHoliday] = []

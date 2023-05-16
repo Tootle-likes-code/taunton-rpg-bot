@@ -2,7 +2,7 @@ import unittest
 from datetime import date
 from unittest.mock import patch
 
-from ttrpg_bot.date_impl.holidays_date_service import HolidaysDateService
+from ttrpg_bot.date_impl.holidays_date_service import HolidaysHolidayDateService
 from ttrpg_bot.dates.bank_holiday import BankHoliday
 
 UK_BANK_HOLS_2023 = {
@@ -32,28 +32,28 @@ class HolidaysDateServiceTests(unittest.TestCase):
 class ConstructorTests(HolidaysDateServiceTests):
     def test_without_province_holidays_called(self, patched_country_holidays):
         # Act
-        HolidaysDateService("GB")
+        HolidaysHolidayDateService("GB")
 
         # Assert
         patched_country_holidays.assert_called_once()
 
     def test_without_province_holidays_args_are_as_expected(self, patched_country_holidays):
         # Act
-        HolidaysDateService("GB")
+        HolidaysHolidayDateService("GB")
 
         # Assert
         patched_country_holidays.assert_called_with("GB", years=2023)
 
     def test_with_province_holidays_called(self, patched_country_holidays):
         # Act
-        HolidaysDateService("GB", "England")
+        HolidaysHolidayDateService("GB", "England")
 
         # Assert
         patched_country_holidays.assert_called_once()
 
     def test_with_province_holidays_args_are_as_expected(self, patched_country_holidays):
         # Act
-        HolidaysDateService("GB", "England")
+        HolidaysHolidayDateService("GB", "England")
 
         # Assert
         patched_country_holidays.assert_called_with("GB", subdiv="England", years=2023)
@@ -87,7 +87,7 @@ class GetHolidaysTests(HolidaysDateServiceTests):
                         name='Late Summer Bank Holiday [England/Wales/Northern Ireland]'),
             BankHoliday(date=date(2023, 12, 26), name='Boxing Day')
         ]
-        self.test_service = HolidaysDateService("GB")
+        self.test_service = HolidaysHolidayDateService("GB")
 
     def test_returns_mapped_bank_holidays(self, _):
         # Act
