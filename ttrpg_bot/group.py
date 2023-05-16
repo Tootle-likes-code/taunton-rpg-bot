@@ -12,9 +12,9 @@ class Group:
     previous_game_masters: set[Member] = field(default_factory=set)
 
     @property
-    def players(self):
+    def players(self) -> set[Member]:
         return self.current_players.union(self.current_game_masters)
 
     @property
-    def size(self):
+    def size(self) -> int:
         return len(self.players)
