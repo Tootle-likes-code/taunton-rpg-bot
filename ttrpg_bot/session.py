@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 from ttrpg_bot.game import Game
 from ttrpg_bot.location import Location
 
+
 @dataclass
 class Session:
     start_date_time: datetime
