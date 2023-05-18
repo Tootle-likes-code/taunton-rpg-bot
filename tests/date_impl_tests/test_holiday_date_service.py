@@ -2,8 +2,8 @@ import unittest
 from datetime import date
 from unittest.mock import patch
 
-from ttrpg_model.dates_impl.holidays_date_service import HolidaysHolidayDateService
-from ttrpg_model.dates.bank_holiday import BankHoliday
+from ttrpg_base.dates_impl.holidays_date_service import HolidaysHolidayDateService
+from ttrpg_base.dates.bank_holiday import BankHoliday
 
 UK_BANK_HOLS_2023 = {
     date(2023, 5, 8): 'Coronation of Charles III',
@@ -28,7 +28,7 @@ class HolidaysDateServiceTests(unittest.TestCase):
     pass
 
 
-@patch("ttrpg_model.dates_impl.holidays_date_service.holidays.country_holidays")
+@patch("ttrpg_base.dates_impl.holidays_date_service.holidays.country_holidays")
 class ConstructorTests(HolidaysDateServiceTests):
     def test_without_province_holidays_called(self, patched_country_holidays):
         # Act
@@ -59,7 +59,7 @@ class ConstructorTests(HolidaysDateServiceTests):
         patched_country_holidays.assert_called_with("GB", subdiv="England", years=2023)
 
 
-@patch("ttrpg_model.dates_impl.holidays_date_service.holidays.country_holidays", return_value=UK_BANK_HOLS_2023)
+@patch("ttrpg_base.dates_impl.holidays_date_service.holidays.country_holidays", return_value=UK_BANK_HOLS_2023)
 class GetHolidaysTests(HolidaysDateServiceTests):
     def setUp(self) -> None:
         self.expected_result = [

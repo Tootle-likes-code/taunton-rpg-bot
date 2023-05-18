@@ -1,7 +1,7 @@
 import unittest
 
-from ttrpg_model.group import Group
-from ttrpg_model.member import Member
+from ttrpg_base.group import Group
+from ttrpg_base.member import Member
 
 
 class GroupTests(unittest.TestCase):

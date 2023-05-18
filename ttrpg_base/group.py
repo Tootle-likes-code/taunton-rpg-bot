@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from ttrpg_model.member import Member
+from ttrpg_base.member import Member
 
 
 @dataclass

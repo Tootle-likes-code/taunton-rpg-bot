@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from ttrpg_model.dates.bank_holiday import BankHoliday
+from ttrpg_base.dates.bank_holiday import BankHoliday
 
 
 class HolidayDateService(ABC):

@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from ttrpg_model.dates.holiday_date_service import HolidayDateService
-from ttrpg_model.exceptions.InvalidScheduleDateTimeException import InvalidScheduleDateTimeException
+from ttrpg_base.dates.holiday_date_service import HolidayDateService
+from ttrpg_base.exceptions.InvalidScheduleDateTimeException import InvalidScheduleDateTimeException
 
 
 class SchedulingService:
