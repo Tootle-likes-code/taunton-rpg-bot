@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 
-from ttrpg_bot.group import Group
-from ttrpg_bot.member import Member
-from ttrpg_bot.session import Session
+from ttrpg_model.group import Group
+from ttrpg_model.member import Member
+from ttrpg_model.session import Session
 
 
 @dataclass

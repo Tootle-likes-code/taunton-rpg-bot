@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import MagicMock, PropertyMock
 
-from ttrpg_bot.game import Game
-from ttrpg_bot.member import Member
+from ttrpg_model.game import Game
+from ttrpg_model.member import Member
 
 
 class GameTests(unittest.TestCase):

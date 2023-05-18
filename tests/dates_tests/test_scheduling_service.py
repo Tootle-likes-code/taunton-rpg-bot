@@ -2,8 +2,8 @@ import datetime
 import unittest
 from unittest.mock import MagicMock
 
-from ttrpg_bot.dates.scheduling_service import SchedulingService
-from ttrpg_bot.exceptions.InvalidScheduleDateTimeException import InvalidScheduleDateTimeException
+from ttrpg_model.dates.scheduling_service import SchedulingService
+from ttrpg_model.exceptions.InvalidScheduleDateTimeException import InvalidScheduleDateTimeException
 
 
 class SchedulingTestService(unittest.TestCase):

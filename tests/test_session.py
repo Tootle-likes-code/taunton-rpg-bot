@@ -2,8 +2,8 @@ import unittest
 from datetime import datetime, timedelta
 from unittest.mock import MagicMock
 
-from ttrpg_bot.location import Location
-from ttrpg_bot.session import Session
+from ttrpg_model.location import Location
+from ttrpg_model.session import Session
 
 
 class SessionTests(unittest.TestCase):

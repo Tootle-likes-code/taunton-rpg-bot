@@ -3,8 +3,8 @@ from datetime import datetime
 import holidays
 from holidays import HolidayBase
 
-from ttrpg_bot.dates.bank_holiday import BankHoliday
-from ttrpg_bot.dates.holiday_date_service import HolidayDateService
+from ttrpg_model.dates.bank_holiday import BankHoliday
+from ttrpg_model.dates.holiday_date_service import HolidayDateService
 
 
 class HolidaysHolidayDateService(HolidayDateService):
