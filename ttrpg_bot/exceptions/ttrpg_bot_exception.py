@@ -1,0 +1,2 @@
+class TtrpgBotException(Exception):
+    pass
