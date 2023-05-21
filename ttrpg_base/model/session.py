@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 
-from ttrpg_base.game import Game
-from ttrpg_base.location import Location
+from ttrpg_base.model.game import Game
+from ttrpg_base.model.location import Location
 
 
 @dataclass

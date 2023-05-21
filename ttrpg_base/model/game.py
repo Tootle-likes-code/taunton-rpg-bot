@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 
-from ttrpg_base.group import Group
+from ttrpg_base.model.group import Group
 
 
 @dataclass

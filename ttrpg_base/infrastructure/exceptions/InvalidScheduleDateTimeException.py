@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from ttrpg_base.exceptions.ttrpg_bot_exception import TtrpgBotException
+from ttrpg_base.infrastructure.exceptions.ttrpg_bot_exception import TtrpgBotException
 
 
 class InvalidScheduleDateTimeException(TtrpgBotException):
