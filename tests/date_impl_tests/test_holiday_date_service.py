@@ -2,8 +2,8 @@ import unittest
 from datetime import date
 from unittest.mock import patch
 
-from ttrpg_base.dates_impl.holidays_date_service import HolidaysHolidayDateService
 from ttrpg_base.dates.bank_holiday import BankHoliday
+from ttrpg_base.dates_impl.holidays_date_service import HolidaysHolidayDateService
 
 UK_BANK_HOLS_2023 = {
     date(2023, 5, 8): 'Coronation of Charles III',

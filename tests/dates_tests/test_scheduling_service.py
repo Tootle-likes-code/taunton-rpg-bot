@@ -11,6 +11,7 @@ class SchedulingTestService(unittest.TestCase):
         self.mock_holiday_service = MagicMock()
         self.test_service = SchedulingService(self.mock_holiday_service)
 
+
 class ScheduleSessionTests(SchedulingTestService):
     def test_cannot_schedule_session_in_past(self):
         # Assert
